@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)" parallel="methods">
+    <parameter name="BASE_URI" value="https://api.spotify.com"/>
+    <parameter name="BASE_URI_ACCOUNT_API" value="https://accounts.spotify.com"/>
+    <classes>
+      <class name="com.spotify.oauth2.test.PlaylistTest">
+        <methods>
+          <include name="negativeTestCreatePlaylistWithExpiredToken"/>
+          <include name="shouldBeAbleToUpdateAPlaylist"/>
+          <include name="shouldBeAbleToGetAPlaylist"/>
+          <include name="beforeMethod"/>
+          <include name="negativeTestCreatePlaylistWithNoBody"/>
+          <include name="getUserDetails"/>
+          <include name="shouldBeAbleToCreatePlaylist"/>
+        </methods>
+      </class> <!-- com.spotify.oauth2.test.PlaylistTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
