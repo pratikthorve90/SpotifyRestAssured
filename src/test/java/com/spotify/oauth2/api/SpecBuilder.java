@@ -30,6 +30,7 @@ public class SpecBuilder {
 		return new RequestSpecBuilder().setBaseUri(System.getProperty("BASE_URI_ACCOUNT_API") + Route.API + Route.TOKEN)
 									.setContentType(ContentType.URLENC)
 									.build();
+		
 	}
 	
 	public static ResponseSpecification getResponseSpecification() {		
